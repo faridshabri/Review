@@ -8,51 +8,51 @@ chan aperiodichandle,aperiodicfinish,continueperiodic,start;</declaration>
 		<name x="5" y="5">taskhandle</name>
 		<declaration>// Place local declarations here.
 clock wait;</declaration>
-		<location id="id0" x="-569" y="-442">
-			<name x="-603" y="-416">task_1</name>
+		<location id="id0" x="-493" y="-671">
+			<name x="-603" y="-688">periodictask_1</name>
 		</location>
-		<location id="id1" x="-187" y="-442">
-			<name x="-204" y="-416">task_2</name>
+		<location id="id1" x="-484" y="-331">
+			<name x="-595" y="-340">periodictask_2</name>
 		</location>
-		<location id="id2" x="-382" y="-705">
-			<name x="-433" y="-739">aperiodic_task</name>
+		<location id="id2" x="170" y="-493">
+			<name x="119" y="-527">aperiodic_task</name>
 		</location>
 		<init ref="id0"/>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id1"/>
-			<label kind="synchronisation" x="-178" y="-629">aperiodicfinish?</label>
-			<nail x="-187" y="-646"/>
+			<label kind="synchronisation" x="-204" y="-289">aperiodicfinish?</label>
+			<nail x="-178" y="-297"/>
 		</transition>
 		<transition>
 			<source ref="id1"/>
 			<target ref="id2"/>
-			<label kind="synchronisation" x="-391" y="-561">aperiodichandle?</label>
-			<nail x="-314" y="-603"/>
+			<label kind="synchronisation" x="-127" y="-467">aperiodichandle?</label>
+			<nail x="-68" y="-416"/>
 		</transition>
 		<transition>
 			<source ref="id2"/>
 			<target ref="id0"/>
-			<label kind="synchronisation" x="-688" y="-637">aperiodicfinish?</label>
-			<nail x="-569" y="-629"/>
+			<label kind="synchronisation" x="-187" y="-748">aperiodicfinish?</label>
+			<nail x="-136" y="-722"/>
 		</transition>
 		<transition>
 			<source ref="id0"/>
 			<target ref="id2"/>
-			<label kind="synchronisation" x="-552" y="-629">aperiodichandle?</label>
-			<nail x="-459" y="-586"/>
+			<label kind="synchronisation" x="-212" y="-646">aperiodichandle?</label>
+			<nail x="-119" y="-603"/>
 		</transition>
 		<transition>
 			<source ref="id1"/>
 			<target ref="id0"/>
-			<label kind="synchronisation" x="-416" y="-365">continueperiodic?</label>
-			<nail x="-391" y="-365"/>
+			<label kind="synchronisation" x="-416" y="-510">continueperiodic?</label>
+			<nail x="-442" y="-501"/>
 		</transition>
 		<transition>
 			<source ref="id0"/>
 			<target ref="id1"/>
-			<label kind="synchronisation" x="-408" y="-467">continueperiodic?</label>
-			<nail x="-382" y="-442"/>
+			<label kind="synchronisation" x="-646" y="-510">continueperiodic?</label>
+			<nail x="-527" y="-493"/>
 		</transition>
 	</template>
 	<template>
